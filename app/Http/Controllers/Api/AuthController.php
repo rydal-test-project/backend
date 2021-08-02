@@ -36,7 +36,7 @@ class AuthController extends Controller
             'username' => $request->email
         ]);
 
-        $request = Request::create(route('passport.token'), 'POST', $data);
+        $request = Request::create('oauth/token', 'POST', $data);
 
         return app()->handle($request);
     }
@@ -56,7 +56,7 @@ class AuthController extends Controller
             'scope' => '',
         ]);
 
-        $request = Request::create(route('passport.token.refresh'), 'POST', $data);
+        $request = Request::create(route('oauth/token/refresh '), 'POST', $data);
 
         return app()->handle($request);
     }
