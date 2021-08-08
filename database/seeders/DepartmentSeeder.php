@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\About;
+use App\Models\Department;
+use App\Models\Group;
 use Illuminate\Database\Seeder;
 
-class AboutSeeder extends Seeder
+class DepartmentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +15,6 @@ class AboutSeeder extends Seeder
      */
     public function run()
     {
-        About::factory(100)->create();
+        Department::factory(5)->has(Group::factory(1))->create();
     }
 }

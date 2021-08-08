@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Client\Response;
@@ -17,9 +18,9 @@ class AuthController extends Controller
     /**
      *
      */
-    public function getUser(): Authenticatable
+    public function getUser(): UserResource
     {
-        return Auth::user();
+        return UserResource::make(Auth::user());
     }
 
     /**

@@ -36,4 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
+
+    public function department()
+    {
+        return $this->hasOneThrough(Department::class, Group::class, 'id', 'id');
+    }
 }

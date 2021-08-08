@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('api/testRoute', [\App\Http\Controllers\Api\UserController::class, 'testRoute'])->name('testRoute');

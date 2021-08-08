@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\About;
 use Illuminate\Database\Seeder;
 
-class AboutSeeder extends Seeder
+class GroupSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +13,6 @@ class AboutSeeder extends Seeder
      */
     public function run()
     {
-        About::factory(100)->create();
+        //
     }
 }

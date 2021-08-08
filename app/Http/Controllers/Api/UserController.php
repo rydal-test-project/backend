@@ -74,8 +74,8 @@ class UserController extends Controller
         /**
          * @var Token $token
          */
-        $token = Auth::user()->token();
+        $user = User::first();
 
-        return Passport::refreshToken();
+        dd($user->department);
     }
 }

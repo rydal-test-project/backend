@@ -24,8 +24,4 @@ Route::prefix('auth')->group(function () {
     });
 });
 
-Route::middleware('auth:api')->group(function () {
-    Route::get('testRoute', [UserController::class, 'testRoute'])->name('testRoute');
-});
-
 Route::apiResource('user', UserController::class);

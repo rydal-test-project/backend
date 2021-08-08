@@ -2,30 +2,27 @@
 
 namespace Database\Factories;
 
-use App\Models\About;
+use App\Models\Group;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class AboutFactory extends Factory
+class GroupFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = About::class;
+    protected $model = Group::class;
 
     /**
      * Define the model's default state.
      *
      * @return array
-     * @throws \Exception
      */
     public function definition()
     {
         return [
-            'text' => $this->faker->realText(random_int(100, 300)),
-            'title' => $this->faker->realText(random_int(10, 25)),
-            'user_id' => 1,
+            'name' => $this->faker->realText(50)
         ];
     }
 }
